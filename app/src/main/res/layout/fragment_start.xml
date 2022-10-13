@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/menu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_24dp"
+            android:layout_marginTop="@dimen/_19dp"
+            android:src="@drawable/ic_menu"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/crown_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_19dp"
+            android:layout_marginEnd="@dimen/_24dp"
+            android:src="@drawable/ic_crown"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/title_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_29dp"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="@string/app_gallery"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/gallery_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:elevation="4dp"
+            android:fontFamily="@font/urbanist_bold"
+            android:text="@string/gallery"
+            android:textColor="@color/colorGray"
+            android:textSize="@dimen/_26sp"
+            android:layout_margin="@dimen/_12dp"
+            app:layout_constraintBottom_toBottomOf="@id/gallery_bg"
+            app:layout_constraintEnd_toEndOf="@id/gallery_bg"
+            app:layout_constraintStart_toStartOf="@id/gallery_bg"
+            app:layout_constraintTop_toTopOf="@id/gallery_bg" />
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/gallery_bg"
+            app:cardCornerRadius="@dimen/_14dp"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_191dp"
+            android:layout_marginStart="@dimen/_68dp"
+            android:layout_marginTop="@dimen/_179dp"
+            android:layout_marginEnd="@dimen/_68dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="3dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/title_txt"
+
+            >
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_gallery_bg" />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/save_btn"
+            android:layout_width="@dimen/_56dp"
+            android:layout_height="@dimen/_56dp"
+            android:layout_marginEnd="@dimen/_7dp"
+            app:cardCornerRadius="@dimen/_28dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toTopOf="@id/gallery_bg"
+            app:layout_constraintEnd_toEndOf="@id/gallery_bg"
+            app:layout_constraintStart_toStartOf="@id/gallery_bg"
+            app:layout_constraintTop_toTopOf="@id/gallery_bg"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_save_oval" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/photo_btn"
+            app:cardCornerRadius="@dimen/_14dp"
+            android:layout_width="@dimen/_28dp"
+            android:layout_height="@dimen/_28dp"
+            android:layout_marginEnd="@dimen/_7dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/gallery_bg"
+            app:layout_constraintEnd_toStartOf="@+id/video_btn"
+            app:layout_constraintStart_toStartOf="@id/save_btn"
+            app:layout_constraintTop_toBottomOf="@id/gallery_bg"
+
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_photo" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/video_btn"
+            app:cardCornerRadius="@dimen/_14dp"
+            android:layout_width="@dimen/_28dp"
+            android:layout_height="@dimen/_28dp"
+            android:layout_marginEnd="@dimen/_7dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/gallery_bg"
+            app:layout_constraintEnd_toStartOf="@+id/view_btn"
+            app:layout_constraintStart_toEndOf="@+id/photo_btn"
+            app:layout_constraintTop_toBottomOf="@id/gallery_bg"
+
+            >
+
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_video" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/view_btn"
+            app:cardCornerRadius="@dimen/_14dp"
+            android:layout_width="@dimen/_28dp"
+            android:layout_height="@dimen/_28dp"
+            android:layout_marginEnd="@dimen/_7dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/gallery_bg"
+            app:layout_constraintEnd_toStartOf="@+id/share_btn"
+            app:layout_constraintStart_toEndOf="@+id/video_btn"
+            app:layout_constraintTop_toBottomOf="@id/gallery_bg"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_view" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/share_btn"
+            app:cardCornerRadius="@dimen/_14dp"
+            android:layout_width="@dimen/_28dp"
+            android:layout_height="@dimen/_28dp"
+            android:layout_marginEnd="@dimen/_7dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:layout_constraintBottom_toBottomOf="@id/gallery_bg"
+            app:layout_constraintEnd_toEndOf="@id/save_btn"
+            app:layout_constraintStart_toEndOf="@+id/view_btn"
+            app:layout_constraintTop_toBottomOf="@id/gallery_bg"
+
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_share" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

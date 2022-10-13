@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/nav_graph_start">
+
+    <fragment
+        android:id="@+id/nav_graph_start"
+        android:name="com.gsolutions.testproject.views.fragments.StartFragment"
+        android:label="fragment_nav_graph_start"
+        tools:layout="@layout/fragment_start">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph_home"
+        android:name="com.gsolutions.testproject.views.fragments.HomeFragment"
+        android:label="fragment_nav_graph_home"
+        tools:layout="@layout/fragment_home">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_graph_photo_deatil"
+        android:name="com.gsolutions.testproject.views.fragments.PhotoDetailFragment"
+        android:label="fragment_nav_graph_detail"
+        tools:layout="@layout/fragment_photo_detail">
+
+        <argument
+            android:name="photoId"
+            app:argType="string" />
+
+    </fragment>
+
+    <action
+        android:id="@+id/action_start_to_home"
+        app:destination="@id/nav_graph_home" />
+
+    <action
+        android:id="@+id/action_photos_to_detail"
+        app:destination="@id/nav_graph_photo_deatil" />
+
+</navigation>

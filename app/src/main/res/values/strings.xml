@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TestProject</string>
+    <string name="app_gallery">App gallery</string>
+    <string name="gallery">Gallery</string>
+    <string name="photos">Photos</string>
+    <string name="videos">Videos</string>
+    <string name="alert_permission_title">Dear User,</string>
+    <string name="alert_permission_desc">To use this App storage \n permission is required \n please click START and allow it.</string>
+    <string name="cancel">Cancel</string>
+    <string name="start">Start</string>
+    <string name="image">Image</string>
+    <string name="share">Share</string>
+    <string name="save">Save</string>
+    <string name="delete">Delete</string>
+
+
+</resources>

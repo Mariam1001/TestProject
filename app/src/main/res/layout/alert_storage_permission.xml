@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/ic_alert_rounded_bg">
+
+
+
+    <TextView
+        android:id="@+id/title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/alert_permission_title"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/_18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/desc_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/alert_permission_desc"
+        android:textColor="@color/colorGrayTransparent60"
+        android:textSize="@dimen/_18sp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_txt" />
+
+
+    <TextView
+        android:id="@+id/cancel_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/urbanist_bold"
+        android:text="@string/cancel"
+        android:textColor="@color/colorGray"
+        android:textSize="@dimen/_18sp"
+        android:gravity="center"
+        android:padding="@dimen/_12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/confirm_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/desc_txt" />
+
+    <TextView
+        android:id="@+id/confirm_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_24dp"
+        android:background="@drawable/ic_start_bg"
+        android:textColor="@color/white"
+        android:text="@string/start"
+        android:gravity="center"
+        android:textSize="@dimen/_18sp"
+        android:fontFamily="@font/urbanist_bold"
+        android:layout_marginBottom="@dimen/_24dp"
+        android:paddingTop="@dimen/_12dp"
+        android:paddingBottom="@dimen/_12dp"
+        android:paddingEnd="@dimen/_35dp"
+        android:paddingStart="@dimen/_35dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/cancel_btn"
+        app:layout_constraintTop_toBottomOf="@id/desc_txt"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
